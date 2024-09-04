@@ -1,0 +1,142 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Page Styling */
+body {
+  font-family: Arial, sans-serif; /* Fallback font */
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+  background: #e39cab;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+header form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header input[type="search"],
+header input[type="submit"] {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  margin: 0 5px;
+}
+
+header input[type="search"] {
+  flex: 1; /* Take remaining space */
+}
+
+header input[type="submit"] {
+  background: #d594a4;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Main Content Styling */
+main {
+  flex: 1;
+  padding-top: 60px; /* Space for the fixed header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #f0f0f0;
+}
+
+.current-weather {
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.current-weather div:last-child {
+  font-size: 2em;
+}
+
+/* Footer Styling */
+footer {
+  background: #fff;
+  color: #7a7777;
+  font-family: Arial, sans-serif;
+  font-weight: 100;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+footer a {
+  color: #d594a4;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Using Pseudo-class Selector */
+.current-weather div:first-child h1 {
+  color: #3e3551;
+}
+
+.current-weather div:last-child {
+  font-size: 2em;
+  color: #735263;
+}
+
+/* Using Pseudo-element Selector */
+.current-weather div:first-child p::first-line {
+  font-weight: bold;
+}
+
+.current-weather div:last-child::after {
+  content: " 🌡️";
+  color: #3e3551;
+}
+
+/* Using Attribute Selector */
+input[placeholder="Enter a city.."] {
+  border: 2px solid #d191a1;
+}
+
+input[type="submit"] {
+  background-color: #735263;
+}
+
+/* Advanced Selector to Make 87% Bold and Light Purple */
+.current-weather p > strong:first-of-type,
+.current-weather p > strong:nth-of-type(2) {
+  font-weight: bold;
+  color: #d191a1;
+}
+
+/* Reducing the length of the input box */
+header input[type="search"] {
+  max-width: 400px; /* Adjust the max-width as 
